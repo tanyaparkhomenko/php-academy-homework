@@ -1,0 +1,67 @@
+.h {
+	background-color: #BBBBBB;
+	text-align: center;
+}
+.a {
+	background-color: #F08080;	
+}
+.b {
+	background-color: #8A2BE2;
+}
+.c {
+	background-color: #A52A2A;
+}
+.d {
+	background-color: #20B2AA;
+}
+.e {
+	background-color: #4169E1;
+}
+.f{
+	background-color: #BBBBBB;
+	text-align: center;
+}
+
+.flex-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content:space-around;
+  margin: 0 ;
+  background-color: #000080;
+  padding: 10px;
+ 
+}
+.a , .b , .c , .d , .e {
+	height: 100px;
+	margin: 0 auto;
+	flex-grow:1;
+	text-align: center;	
+}
+
+.a , .b , .c , .d , .e  { flex-basis:100%}
+
+
+@media all and (min-width: 320px) {
+.a { flex-basis:100%}
+.b { flex-basis:100%}
+.c { flex-basis:100%}
+.d { flex-basis:100%}
+.e { flex-basis:100%}
+
+@media all and (min-width: 769px) {
+.a { flex-basis:50%}
+.b { flex-basis:50%}
+.c { flex-basis:50%}
+.d { flex-basis:50%}
+.e { flex-basis:100%}
+.d { order 5}
+.e { order 4}
+
+@media all and (min-width: 1025px) {
+.a { flex-basis:33%}
+.b { flex-basis:33%}
+.c { flex-basis:33%}
+.d { flex-basis:50%}
+.e { flex-basis:50%}
+
+
