@@ -1,0 +1,27 @@
+* {
+	margin: 0 auto;
+}
+#table {
+font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+font-size: 14px;
+border-collapse: separate;
+text-align: center;
+}
+th, td:first-child {
+background: #9DC05E;
+color: black;
+padding: 10px 20px;
+border: solid black;
+}
+th, td {
+border-style: solid;
+border-width: 0 1px 1px 0;
+border-color: white;
+border: solid black;
+}
+td {
+background: #9DC05E;
+}
+th:first-child, td:first-child {
+text-align: left;
+}

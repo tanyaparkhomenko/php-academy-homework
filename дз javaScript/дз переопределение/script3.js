@@ -3,7 +3,7 @@
         }
 
  Circle.prototype.getSquare = function () {
-             return Math.PI * Math.pow(5, 2); //если в скобках пишу  "radius",вместо 5, то не получается вывести значение
+             return Math.PI * Math.pow(this.radius, 2); //если в скобках пишу  "radius",вместо 5, то не получается вывести значение
          }
  Circle.prototype.valueOf = function () {
              return this.getSquare();
@@ -23,7 +23,7 @@ Triangle.prototype.valueOf = function () {
         }
 
 var triangle = new Triangle(10,30) ;
-var circle = new Circle() ;
+var circle = new Circle(2) ;
 
 console.log (triangle+circle);
 

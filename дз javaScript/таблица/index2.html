@@ -1,0 +1,88 @@
+<html>
+<head>
+	<title>Таблица</title>
+	<link rel="stylesheet"  href="style.css">
+	<script type="text/javascript">
+
+		window.onload = function() {
+		  var persons = [{
+		  	name: 'dima',
+		  	sname: 'iv',
+		  	age: 23,
+		  	languages: "php" ,
+		  },
+		  {
+		  	name: 'dima2',
+		  	sname: 'iv2',
+		  	age: 23,
+		  	languages:"php" ,
+		  },
+		  {
+		  	name: 'dima3',
+		  	sname: 'iv3',
+		  	age: 23,
+		  	languages:"php" ,
+		  },
+		  {
+		  	name: 'dima4',
+		  	sname: 'iv4',
+		  	age: 23,
+		  	languages: "php",
+		  }];
+
+	        function add() {
+	            
+	          var person = {
+	                name: '',
+	                sname: '',
+	                age: '',
+	                languages: ''
+	            };
+	            person.name = prompt("Введите свое имя:");
+	            person.sname = prompt("Введите свою фамилию:");
+	            person.age = prompt("Введите свой возраст:");
+	            person.languages = prompt("Введите языки программирования которыми ,Вы,владеете:");
+	            persons.push(person);
+	        }
+
+
+	        function print() {
+	            var tableContainer = document.getElementById('table');
+	            var table = document.createElement('table');
+	            tableContainer.appendChild(table);
+	         
+	            for (var i=0; i<persons.length; i++) {
+	              var row= document.createElement('tr');
+	              table.appendChild(row);
+	              for (item in persons[i]) {
+	                var td= document.createElement('td');
+	                row.appendChild(td);
+	                td.innerHTML= persons[i][item];
+
+	              }
+	            }
+        	 }			
+		var end;		
+		do {
+		    var a = prompt ("1-добавить нового пользователя, 2 -сгенерировать таблицу");
+		    switch(a) {
+		        case '1':
+		            add();
+		            break;	
+		        case '2': 
+		        	print();
+		            break;
+		    }
+
+		} while (a !== ''||  end)
+
+}
+     
+	</script>
+</head>
+<body>
+	<div id="table" class="flex-container">
+	</div>
+
+</body>
+</html>
